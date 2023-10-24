@@ -30,18 +30,11 @@ class NoteInput extends React.Component {
 
   handleLimitTitle(event) {
     const inputTitle = event.target.value;
-    let title = '';
 
-    if (inputTitle.length > 50) {
-      title = inputTitle.substring(0, 50);
-    } else {
-      title = inputTitle;
-    }
+    if (inputTitle.length > 50) return;
 
-    this.setState(() => {
-      return {
-        title: title,
-      };
+    this.setState({
+      title: inputTitle,
     });
   }
 
@@ -59,6 +52,7 @@ class NoteInput extends React.Component {
             placeholder="Ini adalah judul ..."
             value={this.state.title}
             onChange={this.handleLimitTitle}
+            required
           />
           <textarea
             type="text"
@@ -66,6 +60,7 @@ class NoteInput extends React.Component {
             placeholder="Tulisakan catatanmu di sini ..."
             value={this.state.body}
             onChange={this.onBodyChangeEventHandler}
+            required
           />
           <button type="submit">Buat</button>
         </form>

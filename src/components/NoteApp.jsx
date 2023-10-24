@@ -16,7 +16,7 @@ class NoteApp extends React.Component {
     this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
     this.onArchiveHandler = this.onArchiveHandler.bind(this);
-    this.onSearchChange = this.onSearchChange.bind(this); // Tambahkan handler untuk mengubah nilai pencarian
+    this.onSearchChange = this.onSearchChange.bind(this);
   }
 
   onArchiveHandler(id) {
